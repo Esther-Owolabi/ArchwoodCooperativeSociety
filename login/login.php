@@ -1,7 +1,8 @@
 <?php
+
 $email = $_POST['email'];
 $password = $_POST['password'];
-
+session_start();
 $connection = new mysqli('localhost','root','','sample');
 
 //cehck connection
@@ -18,7 +19,10 @@ $query->execute();
 $result = $query->get_result();
 $user=$result->fetch_assoc();
 if($user && password_verify($password,$user['PASSWORD'])){
-  header("Location: dashboard.html");
+  $_SESSION['user_id'] = $user['ID'];
+  $_SESSION['username'] = $user['EMAIL_ADDRESS'];
+  header("Location: dashboard.php");
+  
   exit();
 }else{
   echo "Invalid credentials";
