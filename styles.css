@@ -1,0 +1,40 @@
+.menu ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.firstSection {
+  background-image: "./images/Path.jpg";
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: cornsilk;
+}
+label {
+  display: block;
+  /*text-align: left;*/
+}
+
+form {
+  max-width: 400px;
+  min-width: 200px;
+  padding: 16px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
